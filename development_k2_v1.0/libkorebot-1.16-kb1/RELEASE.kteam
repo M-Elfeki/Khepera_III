@@ -1,0 +1,84 @@
+------------------------------------------------------------------------------
+ $Id: RELEASE.kteam,v 1.9 2006/10/27 08:40:31 flambercy Exp $
+------------------------------------------------------------------------------
+ $Date: 2006/10/27 08:40:31 $
+ $Revision: 1.9 $
+ $Author: flambercy $
+------------------------------------------------------------------------------
+
+v1.16 jtharin (15-dec-2010)
+  corrected for C++ cross-compiling (used new and class):
+    kb_symbol.h
+    kb_symbol.c
+    kb_config.c
+    kb_gpio.h
+    knet.c
+
+    
+
+v1.15 jtharin (28 oct 2010)
+  added support for kh3 gripper: 
+  	kgripper_test.c created
+  	kb_gripper.c created
+  	Kgripper.knc created
+
+
+v1.11 jtharin (15-juil-2009)
+  updated to support Korebot II
+
+v1.9	flambercy (27-oct-2006)
+
+	kmot.c support for 32bits speed
+	kmotLE_test.c created
+	kmotLE_monitor.c created
+	koreioLE_test.c created
+	kmotLE.knc created
+	koreioLE.knc created
+	
+v1.8	bberger (07-fev-2006)
+
+	kb_fifo api
+	kb_pwm api
+	kmot modified
+	
+
+v1.7	pbureau (19-jan-2005)
+
+	koreio external i2c function
+	pantilt demo program
+	gpio api
+
+	
+v1.6	pbureau (15-dec-2004)
+
+	koreio test program
+	koreio board support
+
+v1.5    pbureau (14-oct-2004)
+
+	support for the koala robot
+	koala robot demo program
+	sound support (wav)
+	socket and network command support
+
+v1.3	cedric.gaudin@k-team.com [07-sept-2004]
+	
+	Added PCF8574 Support (for KoreSDK)
+
+	cedric.gaudin@k-team.com [18-aout-2004]
+
+	Hemisson Robot Support compile now. Need to be tested
+
+	cedric.gaudin@k-team.com [16-aout-2004]
+
+  	Added Hemisson Robot support, need to be tested
+
+v1.2.1	cedric.gaudin@k-team.com [16-aout-2004]
+
+	Corrected some bugs in some Makefile.
+	Bugs correction in kmot.c
+
+v1.2	cedric.gaudin@k-team.com [29-jul-2004]
+
+	Added a lot of new features
+

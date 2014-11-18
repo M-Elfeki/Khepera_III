@@ -1,0 +1,5 @@
+<area shape="rect" href="$koreio_8c.html#ba7a089cc26ead2133e5a70d0bf6fc6a" title="kio_i2c_ReturnRead" alt="" coords="119,6,255,30">
+<area shape="rect" href="$koreio_8c.html#b0350a42088da06d3dfb1ce81a3ab70f" title="kio_i2c_StartRead" alt="" coords="123,54,251,78">
+<area shape="rect" href="$knet_8c.html#92df29c6cbda9a8b70febbf726148dc6" title="knet_lltransfer" alt="" coords="304,6,408,30">
+<area shape="rect" href="$knet_8c.html#dc6fa8c32875470f89a4a4c6aa60b503" title="knet_write8" alt="" coords="312,54,400,78">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="457,54,543,78">

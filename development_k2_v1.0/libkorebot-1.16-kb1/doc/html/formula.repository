@@ -1,0 +1,6 @@
+\form#0:$V_{core}$
+\form#1:$V_{dac} = V_{fb} * (1 + \frac{R1}{R2} + \frac{R1}{R3}) - \frac{R1}{R2} * V_{core}$
+\form#2:$V_{fb} = 700[mV]$
+\form#3:$R1 = 4.7[k\Omega]$
+\form#4:$R2 = 1.5[k\Omega]$
+\form#5:$R3 = 2.2[k\Omega]$

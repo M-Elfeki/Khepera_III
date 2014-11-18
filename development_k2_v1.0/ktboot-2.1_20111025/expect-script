@@ -1,0 +1,10 @@
+set tty [lindex $argv 0]
+set command [lindex $argv 1]
+set timeout -1
+spawn picocom $tty -b 115200 -e y
+expect "Terminal ready"
+send "$command\r"
+expect GUM
+send_user "\nDone!\n"
+send "\031\030\r";
+

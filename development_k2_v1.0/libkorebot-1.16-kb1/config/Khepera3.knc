@@ -1,0 +1,24 @@
+#---------------------------------------------------------------------
+# KoreIO.knc - KoreIO KNet Configuration File
+#---------------------------------------------------------------------
+# $Id: Khepera3.knc,v 1.1 2005/11/16 15:51:27 amaye Exp $
+#---------------------------------------------------------------------
+# $Author: amaye $
+# $Revision: 1.1 $
+# $Date: 2005/11/16 15:51:27 $
+#---------------------------------------------------------------------
+
+section Khepera3
+modulebus i2c
+modbusaddr 6
+
+device dsPic i2c 0x31
+device Mot1 i2c 0x29
+device Mot2 i2c 0x2a
+device Rtc i2c 0x68
+
+device dsPic module 0x31
+device Mot1 module 0x29
+device Mot2 module 0x2a
+device Rtc module 0x68
+

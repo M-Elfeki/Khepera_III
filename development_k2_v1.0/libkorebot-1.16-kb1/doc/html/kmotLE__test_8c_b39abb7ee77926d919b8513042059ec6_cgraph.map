@@ -1,0 +1,14 @@
+<area shape="rect" href="$kmot_8c.html#3572cbe8194aa03505c14c18af4257cf" title="kmot_ConfigurePID" alt="" coords="104,342,237,366">
+<area shape="rect" href="$kmot_8c.html#088875a24e27c208ae36e1d8ebeb3b02" title="kmot_ResetError" alt="" coords="111,150,231,174">
+<area shape="rect" href="$kmot_8c.html#c0aa7b1cc7f7d27ab59ccabaf99f6cdc" title="kmot_SetBlockedTime" alt="" coords="95,198,247,222">
+<area shape="rect" href="$kmot_8c.html#640f712ee3c3f98595253900a8307bf4" title="kmot_SetLimits" alt="" coords="115,390,227,414">
+<area shape="rect" href="$kmot_8c.html#29f05e1f99a020b2843f105e854f213d" title="kmot_SetMargin" alt="" coords="113,6,228,30">
+<area shape="rect" href="$kmot_8c.html#ec0c9179543605623c7c3625bf39abb5" title="kmot_SetMode" alt="" coords="116,54,225,78">
+<area shape="rect" href="$kmot_8c.html#09acf0f6551f3ce2d0e1e004c6d93a78" title="kmot_SetOptions" alt="" coords="109,102,232,126">
+<area shape="rect" href="$kmot_8c.html#69b8a5df8c8184690cf1fa3808331ad3" title="kmot_SetSampleTime" alt="" coords="96,246,245,270">
+<area shape="rect" href="$kmot_8c.html#5925cb8ca0bd09bfe6f7fcc0db0f5751" title="kmot_SetSpeedProfile" alt="" coords="95,294,247,318">
+<area shape="rect" href="$knet_8c.html#598780b62adade010f48342fdd2feefb" title="knet_set_order" alt="" coords="297,294,404,318">
+<area shape="rect" href="$knet_8c.html#c9175d7244c00278b58b83398e6cbec3" title="knet_write16" alt="" coords="304,342,397,366">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="455,342,540,366">
+<area shape="rect" href="$knet_8c.html#dc6fa8c32875470f89a4a4c6aa60b503" title="knet_write8" alt="" coords="307,174,395,198">
+<area shape="rect" href="$knet_8c.html#3a92cbf71c673423ef324c9190f932cd" title="knet_write32" alt="" coords="304,390,397,414">

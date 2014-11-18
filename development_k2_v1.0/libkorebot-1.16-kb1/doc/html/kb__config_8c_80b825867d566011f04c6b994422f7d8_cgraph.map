@@ -1,0 +1,7 @@
+<area shape="rect" href="$kb__symbol_8c.html#a3a0fa181949c7702b8c4d3215e0e9d5" title="kb_add_symbol" alt="" coords="201,5,313,29">
+<area shape="rect" href="$kb__config_8c.html#a3f5d9dde0c0ec4981d09d0d81d27dde" title="kb_build_scoped_name" alt="" coords="179,53,336,77">
+<area shape="rect" href="$kb__error_8c.html#9cb11fb40aba13d25f44b89cc71f5e67" title="kb_error" alt="" coords="387,174,453,198">
+<area shape="rect" href="$kb__config_8c.html#2b849be50ad017cde4f283c6973f20e9" title="kb_is_valid_identifier" alt="" coords="187,200,328,224">
+<area shape="rect" href="$kb__symbol_8c.html#989ba09ae1d926a9d3eaa411bc9e65bf" title="kb_lookup_symbol" alt="" coords="193,101,321,125">
+<area shape="rect" href="$kb__symbol_8c.html#864a00bba783f35eafd2a7e05c8940ab" title="kb_hash" alt="" coords="385,53,455,77">
+<area shape="rect" href="$kb__error_8c.html#3384c94e5877279d11bed633638184d5" title="kb_verror" alt="" coords="505,174,580,198">

@@ -1,0 +1,13 @@
+<area shape="rect" href="$koala__GoAutomation_8c.html#e9baefbfdef3b85be103ec912d46db12" title="thread" alt="" coords="156,102,212,126">
+<area shape="rect" href="$kb__gpio_8c.html#b27da43aa5cbdd9cc0e9ffdf89e343ae" title="kb_gpio_get" alt="" coords="296,6,387,30">
+<area shape="rect" href="$koala_8c.html#0adebfdf4c895ea8ca67300bbb467fea" title="koa_readPosition" alt="" coords="281,198,401,222">
+<area shape="rect" href="$koala_8c.html#faccc5859f1ce4adda3e19c911fd4b70" title="koa_readProximity" alt="" coords="277,150,405,174">
+<area shape="rect" href="$koala_8c.html#375a495b9e50786b06c6a290c94f2dfe" title="koa_setPositionCounter" alt="" coords="261,102,421,126">
+<area shape="rect" href="$koala_8c.html#25b7fcd976cee429c949b50b606ea842" title="koa_setSpeed" alt="" coords="289,54,393,78">
+<area shape="rect" href="$kb__gpio_8c.html#caca2e8b3d9c7a3470b61c370b8240cd" title="bit_test" alt="" coords="504,6,568,30">
+<area shape="rect" href="$knet_8c.html#213b3af1e62035b3972f4572a9d68998" title="knet_printf" alt="" coords="495,102,577,126">
+<area shape="rect" href="$knet_8c.html#958280a8991353f3325844076669223d" title="knet_read_string" alt="" coords="477,150,595,174">
+<area shape="rect" href="$koala_8c.html#4d5572ad917e13387dc93ad78e009e39" title="koa_get_nextValue" alt="" coords="471,198,601,222">
+<area shape="rect" href="$kb__memory_8c.html#dd347b03be926d914253f46f80e01765" title="kb_realloc" alt="" coords="655,102,735,126">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="652,54,737,78">
+<area shape="rect" href="$knet_8c.html#55448c3291f508086732d70fbb643c30" title="knet_llread" alt="" coords="653,150,736,174">

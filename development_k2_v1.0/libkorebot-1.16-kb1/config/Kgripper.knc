@@ -1,0 +1,18 @@
+#---------------------------------------------------------------------
+# Kgripper.knc - Gripper KNet Configuration File
+#---------------------------------------------------------------------
+# $Author: F.Lambercy $
+# $Revision: 1.1 $
+# $Date: 2010/11/02 15:51:27 $
+#---------------------------------------------------------------------
+
+section Kgripper 
+modulebus i2c
+modbusaddr 6
+
+device Arm i2c 0x14
+device Gripper i2c 0x15
+
+device Arm module 0x14
+device Gripper module 0x15
+

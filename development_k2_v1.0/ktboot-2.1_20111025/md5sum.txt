@@ -1,0 +1,5 @@
+37c2e44ffe21f68277232bbb9d705e03 fs_jffs2.img (Angstrom-korebot2-image-glibc-ipk-2007.9-test-20111021-gumstix-custom-verdex.rootfs.jffs2)
+
+1852d261c71349e8c52d468c7bb08140  kt-uImage.bin (uImage-2.6.24-r1-gumstix-custom-verdex.bin)
+
+

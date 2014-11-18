@@ -1,0 +1,12 @@
+<area shape="rect" href="$kmot_8c.html#3d602b97e1d16d7ea91d55924d63ce8b" title="kmot_GetMeasure" alt="" coords="101,98,229,122">
+<area shape="rect" href="$kmot_8c.html#ec0c9179543605623c7c3625bf39abb5" title="kmot_SetMode" alt="" coords="111,230,220,254">
+<area shape="rect" href="$kmot_8c.html#5b523ed785415485c769a4d96c461bd8" title="kmot_SetPoint" alt="" coords="112,158,219,182">
+<area shape="rect" href="$knet_8c.html#b1b2716718bfa0fa4f44c3ba1f0961b4" title="knet_read16" alt="" coords="436,5,527,29">
+<area shape="rect" href="$knet_8c.html#44208ab588a0e926659f4877fc87a714" title="knet_read32" alt="" coords="436,54,527,78">
+<area shape="rect" href="$knet_8c.html#598780b62adade010f48342fdd2feefb" title="knet_set_order" alt="" coords="279,104,385,128">
+<area shape="rect" href="$knet_8c.html#92df29c6cbda9a8b70febbf726148dc6" title="knet_lltransfer" alt="" coords="576,54,680,78">
+<area shape="rect" href="$knet_8c.html#dc6fa8c32875470f89a4a4c6aa60b503" title="knet_write8" alt="" coords="288,248,376,272">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="439,212,524,236">
+<area shape="rect" href="$knet_8c.html#1060218c799b6632a29673d8db6fc3bd" title="knet_read" alt="" coords="293,152,371,176">
+<area shape="rect" href="$knet_8c.html#3a92cbf71c673423ef324c9190f932cd" title="knet_write32" alt="" coords="285,200,379,224">
+<area shape="rect" href="$knet_8c.html#d5d0333b6dd8438307e51850a7af26be" title="knet_read8" alt="" coords="439,140,524,164">

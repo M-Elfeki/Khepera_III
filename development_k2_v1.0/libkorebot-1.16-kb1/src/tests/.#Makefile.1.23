@@ -1,0 +1,64 @@
+#
+# libkorebot tests Makefile
+#
+#
+# libkorebot tests Makefile
+#
+.PHONY: tests clean
+
+ifeq ($(BUILD), )
+BUILD = ../build-korebot
+endif
+
+ifeq ($(CC), cc)
+CC = arm-linux-gcc
+endif
+
+SRCS	= $(wildcard *.c)
+OBJS	= $(patsubst %.c,%.o,${SRCS})
+INCS	=-I../${BUILD}/include
+LIBS	=-L../${BUILD}/lib -lkorebot
+CFLAGS 	= -Os
+
+#Test Programs
+TARGETS	= kb_config_test kmot_pantilt koala_test \
+	  soundtest koreio_test koreio_auto kmot_monitor gpio_test \
+	  kb_lrftest kmot_ipserver kmotLE_monitor koreioLE_test korebase_test \
+	  koreioLE_auto koreio_gripper koreio_debug 
+
+#Test Programs which require pthread
+PTHREAD_TARGETS = koala_demo_client koala_demo kmot_test kmotLE_test khepera3_test
+
+.PHONY: test clean depend 
+
+all: ${TARGETS} ${PTHREAD_TARGETS}
+
+test: ${TARGETS} ${PTHREAD_TARGETS}
+
+$(TARGETS): % : %.o
+	@echo "Building $@"
+	@$(CC) -o $@ $? $(LIBS) $(CFLAGS) 
+	
+
+$(PTHREAD_TARGETS): % : %.o
+	@echo "Building $@"
+	@$(CC) -o $@ $? -pthread $(LIBS) $(CFLAGS) 
+	
+
+clean: 
+	@echo "Cleaning"
+	@rm -f *.o .depend ${TARGETS} ${PTHREAD_TARGETS} *~
+
+depend:	
+	@echo "Building dependencies"
+	@rm -f .depend
+	@touch .depend
+	@makedepend ${SYS_INCLUDES} -I .. -Y -f .depend ${SRCS}
+
+%.o:	%.c
+	@echo "Compiling $@"
+	@$(CC) $(INCS) -c $(CFLAGS) $< -o $@
+
+ifeq (.depend,$(wildcard .depend))
+include .depend 
+endif

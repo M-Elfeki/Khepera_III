@@ -1,0 +1,14 @@
+set tty [lindex $argv 0]
+set file [lindex $argv 1]
+set timeout -1
+spawn picocom $tty -b 115200 -e y --send-cmd "sb -vv"
+expect "Terminal ready"
+send "loady\r";
+expect Ready
+send "\031\023";
+expect file:
+send "$file\r"
+expect GUM
+send_user "\nDone!\n"
+send "\031\030";
+

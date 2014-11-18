@@ -1,0 +1,7 @@
+<area shape="rect" href="$kb__socket_8c.html#2b538227cf83afa6aedb5735f26c25c7" title="DieWithError" alt="" coords="479,104,572,128">
+<area shape="rect" href="$koala__demo__client_8c.html#e7aa4d209b9c2b9cfd8d86a25986dd4c" title="handle_joyaxis" alt="" coords="111,80,217,104">
+<area shape="rect" href="$koala__demo__client_8c.html#f15a0bb250bea5d59fd22d0b2e5551a2" title="handle_joybutton" alt="" coords="104,128,224,152">
+<area shape="rect" href="$koala__demo__client_8c.html#bc7554f3f410ae3c00fa8f20e45027a7" title="handle_kill" alt="" coords="123,176,205,200">
+<area shape="rect" href="$kb__socket_8c.html#fa2f4ff49566a3dd3b8dee453649b734" title="ksock_connect" alt="" coords="296,176,405,200">
+<area shape="rect" href="$kb__socket_8c.html#27050edac9941f2cf5b7c3c52ba697fe" title="ksock_init" alt="" coords="124,275,204,299">
+<area shape="rect" href="$kb__socket_8c.html#7e3dd402b1d8bf3c03bdf09f1994cf9b" title="ksock_send_command" alt="" coords="273,104,428,128">

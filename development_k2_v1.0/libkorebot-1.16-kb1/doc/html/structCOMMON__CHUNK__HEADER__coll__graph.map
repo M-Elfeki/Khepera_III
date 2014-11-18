@@ -1,0 +1,2 @@
+<area shape="rect" href="$structRIFF__CHUNK__HEADER.html" title="{RIFF_CHUNK_HEADER\n|+ chunk_content\l|}" alt="" coords="5,41,168,116">
+<area shape="rect" href="$structFMT__CHUNK__HEADER.html" title="{FMT_CHUNK_HEADER\n|+ format\l+ nb_channel\l+ sample_rate\l+ byte_per_sec\l+ byte_per_sample\l+ bit_per_sample\l|}" alt="" coords="192,7,352,151">

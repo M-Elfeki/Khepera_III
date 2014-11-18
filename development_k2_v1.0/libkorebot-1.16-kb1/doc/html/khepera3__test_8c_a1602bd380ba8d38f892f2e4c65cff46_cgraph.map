@@ -1,0 +1,10 @@
+<area shape="rect" href="$kb__khepera3_8c.html#f656420f26abc33db648c8ef38fe2e7f" title="kh3_revision" alt="" coords="163,66,256,90">
+<area shape="rect" href="$kmot_8c.html#cbf6960f35fee4209643a426b333470d" title="kmot_GetFWVersion" alt="" coords="139,138,280,162">
+<area shape="rect" href="$kb__gpio_8c.html#b27da43aa5cbdd9cc0e9ffdf89e343ae" title="kb_gpio_get" alt="" coords="351,6,441,30">
+<area shape="rect" href="$kb__khepera3_8c.html#560ca2a7e8614f28e009c99de7ce39dd" title="kh3_getcommand" alt="" coords="335,54,457,78">
+<area shape="rect" href="$kb__khepera3_8c.html#328a5ebb9f30203979f102395c9da4c9" title="kh3_sendcommand" alt="" coords="329,102,463,126">
+<area shape="rect" href="$kb__gpio_8c.html#caca2e8b3d9c7a3470b61c370b8240cd" title="bit_test" alt="" coords="532,6,596,30">
+<area shape="rect" href="$knet_8c.html#55448c3291f508086732d70fbb643c30" title="knet_llread" alt="" coords="523,54,605,78">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="521,102,607,126">
+<area shape="rect" href="$knet_8c.html#d5d0333b6dd8438307e51850a7af26be" title="knet_read8" alt="" coords="353,150,439,174">
+<area shape="rect" href="$knet_8c.html#92df29c6cbda9a8b70febbf726148dc6" title="knet_lltransfer" alt="" coords="512,150,616,174">

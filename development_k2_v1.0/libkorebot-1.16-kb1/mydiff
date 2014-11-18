@@ -1,0 +1,345 @@
+Index: src/koreio.c
+===================================================================
+RCS file: /home/cvs/libkorebot/src/koreio.c,v
+retrieving revision 1.2
+diff -c -r1.2 koreio.c
+*** src/koreio.c	20 Jan 2005 08:41:54 -0000	1.2
+--- src/koreio.c	15 Feb 2005 13:58:26 -0000
+***************
+*** 19,25 ****
+   *         KoreIO from a KoreBot program.
+   *
+   * \author   Pierre Bureau (K-Team SA)
+!  *
+   * \note     Copyright (C) 2004 K-TEAM SA
+   * \bug      none discovered.                                         
+   * \todo     nothing.
+--- 19,26 ----
+   *         KoreIO from a KoreBot program.
+   *
+   * \author   Pierre Bureau (K-Team SA)
+!  *           Frédéric Lambercy (K-Team SA)
+!  * 
+   * \note     Copyright (C) 2004 K-TEAM SA
+   * \bug      none discovered.                                         
+   * \todo     nothing.
+***************
+*** 69,75 ****
+    if(an > 11)
+      return -1;
+  
+!   addr = KIO_ANReadBase + an;
+  
+    if (knet_lltransfer( dev, &addr, 1, buf, 6) < 0)
+      return -2;
+--- 70,76 ----
+    if(an > 11)
+      return -1;
+  
+!   addr = KIO_ANReadBase + (an * 6);
+  
+    if (knet_lltransfer( dev, &addr, 1, buf, 6) < 0)
+      return -2;
+***************
+*** 88,93 ****
+--- 89,121 ----
+  }
+  
+  /*--------------------------------------------------------------------*/
++ /*!
++  * Change a analog output value
++  *
++  * \param dev      K-Net Device Descriptor to the KoreIO
++  * \param an 	   the output to set (0-7)
++  * \param value	   the analog value (0-255)
++  *
++  * \return
++  * 	- 0 if succesful
++  * 	- -1 if the given output is invalid
++  */
++ 
++ int kio_SetANValue(knet_dev_t * dev, unsigned int an, unsigned int value)
++ {
++   char addr;
++ 
++   if(an > 7)
++     return -1;
++ 
++   addr = KIO_ANWriteBase + an;
++ 
++   knet_write8(dev, addr, value);
++ 
++   return 0;
++ }
++   
++ /*--------------------------------------------------------------------*/
+  /*! 
+   * Configure a digital IO to be used as an input, output or PWM ouput
+   *
+***************
+*** 190,199 ****
+   */
+  int kio_ChangeLed(knet_dev_t * dev, unsigned state)
+  {
+    if(state > 2)
+      return -1;
+  
+!   knet_write8(dev , KIO_IOChgLed, state);
+  
+    return 0;
+  }
+--- 218,230 ----
+   */
+  int kio_ChangeLed(knet_dev_t * dev, unsigned state)
+  {
++   char addr;
++   
+    if(state > 2)
+      return -1;
+  
+!   addr = KIO_IOChgLed + state;
+!   knet_write8(dev , KIO_IOChgLed, 16);
+  
+    return 0;
+  }
+***************
+*** 241,246 ****
+--- 272,302 ----
+    return 0;
+  }
+  
++ /*-------------------------------------------------------------------*/
++ /*!
++  * Change PWM channel ratio
++  *
++  * \param dev      K-Net Device Descriptor to the KoreIo
++  * \param io 	   the io to modify PWM ratio 
++  * \parama ratio   the ratio value
++  *
++  * \return 
++  * 	- 0 if succesful
++  * 	- -1 if the given io is invalid 
++  */
++ int kio_ChangePWM_ratio(knet_dev_t * dev, unsigned int io, unsigned int ratio)
++ {
++   char addr;
++   
++   if (io > 15)
++     return -1;
++   
++   addr = KIO_PWMRatio + io;
++   knet_write8(dev, addr,  ratio);
++ 
++   return 0;
++ }
++ 
+  /*--------------------------------------------------------------------*/
+  /*! 
+   * Change the state of a power output 
+***************
+*** 363,369 ****
+      return -1;
+    
+  
+!   knet_read8( dev , KIO_I2CScan, &val );
+    len  = val;
+    addr = KIO_I2CList;
+  
+--- 419,425 ----
+      return -1;
+    
+  
+!   knet_read8( dev , KIO_I2C_ScanRead, &val );
+    len  = val;
+    addr = KIO_I2CList;
+  
+Index: src/koreio.h
+===================================================================
+RCS file: /home/cvs/libkorebot/src/koreio.h,v
+retrieving revision 1.2
+diff -c -r1.2 koreio.h
+*** src/koreio.h	20 Jan 2005 08:41:54 -0000	1.2
+--- src/koreio.h	15 Feb 2005 15:17:24 -0000
+***************
+*** 6,12 ****
+   *         
+   * $Author: pbureau $
+   * $Date: 2005/01/20 08:41:54 $
+!  * $Revision: 1.2 $
+   *--------------------------------------------------------------------*/
+  
+  
+--- 6,12 ----
+   *         
+   * $Author: pbureau $
+   * $Date: 2005/01/20 08:41:54 $
+!  * $Revision: 1.3 $
+   *--------------------------------------------------------------------*/
+  
+  
+***************
+*** 15,33 ****
+  
+  #define KIO_FWVersion	0x00
+  #define KIO_IOReadBase	0x01
+  #define KIO_ANReadBase  0x11
+  #define KIO_IOConfigIn	0x19
+  #define KIO_IOConfigOut	0x1A
+  #define KIO_IOConfigPwm	0x1B
+  #define KIO_IOClearBase	0x1C
+  #define KIO_IOSetBase	0x1D
+  #define KIO_IOChgBase	0x1E
+! #define KIO_IOChgLed	0x21
+  #define KIO_PWClearBase	0x22
+  #define KIO_PWSetBase	0x23
+  #define KIO_PWChgBase   0x24
+  #define KIO_TimerBase	0x25
+  #define KIO_I2CScan	0x37
+  #define KIO_I2CList     0x38
+  
+  extern void kio_GetFWVersion( knet_dev_t * dev , unsigned int *);
+--- 15,36 ----
+  
+  #define KIO_FWVersion	0x00
+  #define KIO_IOReadBase	0x01
++ #define KIO_PWMRatio	0x01
+  #define KIO_ANReadBase  0x11
++ #define KIO_ANWriteBase 0x11
+  #define KIO_IOConfigIn	0x19
+  #define KIO_IOConfigOut	0x1A
+  #define KIO_IOConfigPwm	0x1B
+  #define KIO_IOClearBase	0x1C
+  #define KIO_IOSetBase	0x1D
+  #define KIO_IOChgBase	0x1E
+! #define KIO_IOChgLed	0x1C
+  #define KIO_PWClearBase	0x22
+  #define KIO_PWSetBase	0x23
+  #define KIO_PWChgBase   0x24
+  #define KIO_TimerBase	0x25
+  #define KIO_I2CScan	0x37
++ #define KIO_I2C_ScanRead 0x71
+  #define KIO_I2CList     0x38
+  
+  extern void kio_GetFWVersion( knet_dev_t * dev , unsigned int *);
+***************
+*** 38,44 ****
+--- 41,49 ----
+  extern int kio_ReadAnalog(knet_dev_t * dev, unsigned int an, uint16_t *value, uint32_t *time);
+  extern int kio_ChangeLed(knet_dev_t * dev, unsigned state);
+  extern int kio_ConfigIO(knet_dev_t * dev, unsigned io, unsigned config);
++ extern int kio_ChangePWM_ratio(knet_dev_t * dev, unsigned int io, unsigned int ratio);
+  extern void kio_i2c_StartScan(knet_dev_t * dev);
++ extern int kio_SetANValue(knet_dev_t * dev, unsigned int an, unsigned int value);
+  extern int kio_i2c_ListScan(knet_dev_t * dev, char * list);
+  
+  #endif /* __koreio__ */
+Index: src/tests/Makefile
+===================================================================
+RCS file: /home/cvs/libkorebot/src/tests/Makefile,v
+retrieving revision 1.18
+diff -c -r1.18 Makefile
+*** src/tests/Makefile	11 Feb 2005 16:15:23 -0000	1.18
+--- src/tests/Makefile	28 Feb 2005 17:42:41 -0000
+***************
+*** 36,42 ****
+  
+  $(TARGETS): % : %.o
+  	@echo "Building $@"
+! 	@$(CC) -o $@ $? $(LIBS) $(CFLAGS)
+  
+  $(PTHREAD_TARGETS): % : %.o
+  	@echo "Building $@"
+--- 36,42 ----
+  
+  $(TARGETS): % : %.o
+  	@echo "Building $@"
+! 	@$(CC) -o $@ -static $? $(LIBS) $(CFLAGS)
+  
+  $(PTHREAD_TARGETS): % : %.o
+  	@echo "Building $@"
+Index: src/tests/koreio_test.c
+===================================================================
+RCS file: /home/cvs/libkorebot/src/tests/koreio_test.c,v
+retrieving revision 1.4
+diff -c -r1.4 koreio_test.c
+*** src/tests/koreio_test.c	31 Jan 2005 07:34:42 -0000	1.4
+--- src/tests/koreio_test.c	28 Feb 2005 16:33:09 -0000
+***************
+*** 5,11 ****
+   *--------------------------------------------------------------------
+   * $Author: pbureau $
+   * $Date: 2005/01/31 07:34:42 $
+!  * $Revision: 1.4 $
+   *--------------------------------------------------------------------*/
+  
+  #include <signal.h>
+--- 5,11 ----
+   *--------------------------------------------------------------------
+   * $Author: pbureau $
+   * $Date: 2005/01/31 07:34:42 $
+!  * $Revision: 1.5 $
+   *--------------------------------------------------------------------*/
+  
+  #include <signal.h>
+***************
+*** 156,161 ****
+--- 156,194 ----
+      printf("read ad %d: %u at %lu mS\r\n",atoi(argv[1]),val,time);
+  }
+  
++ /*-------------------------------------------------------------------*/
++ /*! Change the given analog output value
++  */
++ int setad( int argc, char * argv[], void * data)
++ {
++   int rc;
++   float val;
++ 
++   rc = kio_SetANValue(koreio,atoi(argv[1]), atoi(argv[2]));
++ 
++   val = (atoi(argv[2]) - 139) *0.035;
++   if(rc < 0)
++     printf("wrong analog output\r\n");
++   else
++     printf("ananlog output %d: %f\r\n",atoi(argv[1]), val);
++ 
++ }
++ 
++ /*--------------------------------------------------------------------*/
++ /*! Set the PWM channel ratio
++  */
++ int setratio( int argc, char * argv[], void * data)
++ {
++   int rc;
++ 
++   rc = kio_ChangePWM_ratio(koreio, atoi(argv[1]), atoi(argv[2]));
++ 
++   if(rc < 0)
++     printf("wrong PWM output\r\n");
++   else
++     printf("channel %d set to %u%%\r\n",atoi(argv[1]), atoi(argv[2]));
++ }
++ 
+  /*--------------------------------------------------------------------*/
+  /*! Read the given IO state
+   */
+***************
+*** 279,284 ****
+--- 312,318 ----
+    { "readio"          , 1 , 1 , readio },
+    { "setio"           , 1 , 1 , setio },
+    { "cleario"         , 1 , 1 , resetio },
++   { "setratio"	      , 2 , 2 , setratio },
+    { "setpw"           , 1 , 1 , setpw },
+    { "clearpw"         , 1 , 1 , resetpw },
+    { "changepw"        , 1 , 1 , changepw },
+***************
+*** 286,291 ****
+--- 320,326 ----
+    { "changeled"       , 1 , 1 , changeled },
+    { "configio"        , 2 , 2 , configio },
+    { "readad"          , 1 , 1 , readad },
++   { "setad"	      , 2 , 2 , setad },
+    { "startscan"       , 0 , 0 , startscan},
+    { "listscan"        , 0 , 0 , listscan},
+    { "timer"           , 1 , 1 , timer},

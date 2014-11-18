@@ -1,0 +1,16 @@
+<area shape="rect" href="$kmot_8c.html#3572cbe8194aa03505c14c18af4257cf" title="kmot_ConfigurePID" alt="" coords="184,342,317,366">
+<area shape="rect" href="$kmot_8c.html#088875a24e27c208ae36e1d8ebeb3b02" title="kmot_ResetError" alt="" coords="191,102,311,126">
+<area shape="rect" href="$kmot_8c.html#c0aa7b1cc7f7d27ab59ccabaf99f6cdc" title="kmot_SetBlockedTime" alt="" coords="175,150,327,174">
+<area shape="rect" href="$kmot_8c.html#640f712ee3c3f98595253900a8307bf4" title="kmot_SetLimits" alt="" coords="195,390,307,414">
+<area shape="rect" href="$kmot_8c.html#29f05e1f99a020b2843f105e854f213d" title="kmot_SetMargin" alt="" coords="193,198,308,222">
+<area shape="rect" href="$kmot_8c.html#ec0c9179543605623c7c3625bf39abb5" title="kmot_SetMode" alt="" coords="196,6,305,30">
+<area shape="rect" href="$kmot_8c.html#09acf0f6551f3ce2d0e1e004c6d93a78" title="kmot_SetOptions" alt="" coords="189,54,312,78">
+<area shape="rect" href="$kmot_8c.html#69b8a5df8c8184690cf1fa3808331ad3" title="kmot_SetSampleTime" alt="" coords="176,246,325,270">
+<area shape="rect" href="$kmot_8c.html#5925cb8ca0bd09bfe6f7fcc0db0f5751" title="kmot_SetSpeedProfile" alt="" coords="175,294,327,318">
+<area shape="rect" href="$kb__socket_8c.html#5c3bae414ded845ac60780a2a6118691" title="ksock_send_answer" alt="" coords="181,438,320,462">
+<area shape="rect" href="$knet_8c.html#598780b62adade010f48342fdd2feefb" title="knet_set_order" alt="" coords="377,294,484,318">
+<area shape="rect" href="$knet_8c.html#c9175d7244c00278b58b83398e6cbec3" title="knet_write16" alt="" coords="384,342,477,366">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="535,342,620,366">
+<area shape="rect" href="$knet_8c.html#dc6fa8c32875470f89a4a4c6aa60b503" title="knet_write8" alt="" coords="387,174,475,198">
+<area shape="rect" href="$knet_8c.html#3a92cbf71c673423ef324c9190f932cd" title="knet_write32" alt="" coords="384,390,477,414">
+<area shape="rect" href="$kb__socket_8c.html#2b538227cf83afa6aedb5735f26c25c7" title="DieWithError" alt="" coords="384,438,477,462">

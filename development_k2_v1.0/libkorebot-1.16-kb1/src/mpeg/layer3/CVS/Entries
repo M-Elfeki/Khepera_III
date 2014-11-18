@@ -1,0 +1,23 @@
+/Makefile/1.3/Fri Aug 18 12:33:35 2006//
+/bitstream.c/1.1/Fri Aug 18 12:33:36 2006//
+/bitstream.h/1.1/Fri Aug 18 12:33:36 2006//
+/formatbits.c/1.1/Fri Aug 18 12:33:37 2006//
+/formatbits.h/1.1/Fri Aug 18 12:33:37 2006//
+/huffman.c/1.1/Fri Aug 18 12:33:38 2006//
+/huffman.h/1.1/Fri Aug 18 12:33:39 2006//
+/l3bitstrea.c/1.1/Fri Aug 18 12:33:39 2006//
+/l3bitstrea.h/1.1/Fri Aug 18 12:33:40 2006//
+/l3loop.c/1.1/Fri Aug 18 12:33:40 2006//
+/l3loop.h/1.1/Fri Aug 18 12:33:41 2006//
+/l3mdct.c/1.1/Fri Aug 18 12:33:41 2006//
+/l3mdct.h/1.1/Fri Aug 18 12:33:42 2006//
+/l3subband.c/1.1/Fri Aug 18 12:33:42 2006//
+/l3subband.h/1.1/Fri Aug 18 12:33:43 2006//
+/layer3.c/1.1/Fri Aug 18 12:33:43 2006//
+/layer3.h/1.1/Fri Aug 18 12:33:44 2006//
+/mult.S/1.1/Fri Aug 18 12:33:44 2006//
+/reservoir.c/1.1/Fri Aug 18 12:33:45 2006//
+/reservoir.h/1.1/Fri Aug 18 12:33:45 2006//
+/tables.c/1.1/Fri Aug 18 12:33:45 2006//
+/tables.h/1.1/Fri Aug 18 12:33:46 2006//
+D

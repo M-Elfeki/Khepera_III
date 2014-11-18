@@ -1,0 +1,26 @@
+<area shape="rect" href="$korebot_8h.html" title="korebot.h" alt="" coords="1205,82,1280,106">
+<area shape="rect" href="$kb__lrf_8c.html" title="This module provides useful basic facilities to use the KoreBot with the LedRangeFinder..." alt="" coords="5,156,69,180">
+<area shape="rect" href="$kb__pwm_8c.html" title="This module provides useful basic facilities to use the KoreBot PWM and configure..." alt="" coords="93,156,173,180">
+<area shape="rect" href="$hem_8c.html" title="This module provides useful basic facilities to use a Hemisson Robot from KoreBot..." alt="" coords="1939,156,1995,180">
+<area shape="rect" href="$kb__cmdparser_8c.html" title="This module provides basic command parsing facilities." alt="" coords="2019,156,2131,180">
+<area shape="rect" href="$kb__config_8c.html" title="This module reads, parses and store the information contained in the configuration..." alt="" coords="2155,156,2243,180">
+<area shape="rect" href="$kb__error_8c.html" title="This module provides basic error and message handling." alt="" coords="2267,156,2344,180">
+<area shape="rect" href="$kb__gpio_8c.html" title="This module provides useful basic facilities to use the KoreBot GPIO and configure..." alt="" coords="2368,156,2445,180">
+<area shape="rect" href="$kb__gripper_8c.html" title="kb_gripper.c" alt="" coords="2469,156,2560,180">
+<area shape="rect" href="$kb__init_8c.html" title="kb_init.c" alt="" coords="197,156,267,180">
+<area shape="rect" href="$kb__khepera3_8c.html" title="kb_khepera3.c" alt="" coords="291,156,397,180">
+<area shape="rect" href="$kb__memory_8c.html" title="kb_memory.c" alt="" coords="421,156,520,180">
+<area shape="rect" href="$kb__socket_8c.html" title="kb_socket.c" alt="" coords="544,156,635,180">
+<area shape="rect" href="$kb__sound_8c.html" title="kb_sound.c" alt="" coords="659,156,747,180">
+<area shape="rect" href="$kb__symbol_8c.html" title="This module provides primitive to handle symbol table." alt="" coords="771,156,867,180">
+<area shape="rect" href="$kb__time_8c.html" title="This module provides a basic time function." alt="" coords="891,156,968,180">
+<area shape="rect" href="$kb__wav_8c.html" title="This module provides functions to read, write and playback wav data from/to a wav..." alt="" coords="992,156,1067,180">
+<area shape="rect" href="$kbot_8c.html" title="This module contains all support for the KoreBot board." alt="" coords="1091,156,1147,180">
+<area shape="rect" href="$kmot_8c.html" title="This module provides useful basic facilities to use a KoreMotor." alt="" coords="1171,156,1232,180">
+<area shape="rect" href="$knet_8c.html" title="This module is an abstraction layer for communication with different busses and devices..." alt="" coords="1256,156,1312,180">
+<area shape="rect" href="$knet__i2c_8c.html" title="This module is the low&#45;level communication layer between the KoreBot Library and..." alt="" coords="1336,156,1416,180">
+<area shape="rect" href="$knet__rs232_8c.html" title="This module is the low&#45;level communication layer between the KoreBot Library and..." alt="" coords="1440,156,1536,180">
+<area shape="rect" href="$koala_8c.html" title="This module provides useful basic facilities to use a Hemisson Robot from KoreBot..." alt="" coords="1560,156,1624,180">
+<area shape="rect" href="$koreio_8c.html" title="This module provides useful API to use a KoreIO from a KoreBot program." alt="" coords="1648,156,1715,180">
+<area shape="rect" href="$ltc1663_8c.html" title="This module provides the primitve to send command to an LTC1663 DAC device connected..." alt="" coords="1739,156,1813,180">
+<area shape="rect" href="$pcf8574_8c.html" title="This module provides all the primitives to read and write data to/from a PCF8574..." alt="" coords="1837,156,1915,180">

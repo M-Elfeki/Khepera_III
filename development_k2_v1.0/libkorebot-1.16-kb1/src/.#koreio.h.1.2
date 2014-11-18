@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------------
+ * koreio.c - KoreBot Library - KoreIO Support
+ *--------------------------------------------------------------------
+ * $Id: koreio.h,v 1.2 2005/01/20 08:41:54 pbureau Exp $
+ *--------------------------------------------------------------------	
+ *         
+ * $Author: pbureau $
+ * $Date: 2005/01/20 08:41:54 $
+ * $Revision: 1.3 $
+ *--------------------------------------------------------------------*/
+
+
+#ifndef __koreio__
+#define __koreio__
+
+#define KIO_FWVersion	0x00
+#define KIO_IOReadBase	0x01
+#define KIO_PWMRatio	0x01
+#define KIO_ANReadBase  0x11
+#define KIO_ANWriteBase 0x11
+#define KIO_IOConfigIn	0x19
+#define KIO_IOConfigOut	0x1A
+#define KIO_IOConfigPwm	0x1B
+#define KIO_IOClearBase	0x1C
+#define KIO_IOSetBase	0x1D
+#define KIO_IOChgBase	0x1E
+#define KIO_IOChgLed	0x1C
+#define KIO_PWClearBase	0x22
+#define KIO_PWSetBase	0x23
+#define KIO_PWChgBase   0x24
+#define KIO_TimerBase	0x25
+#define KIO_I2CScan	0x37
+#define KIO_I2C_ScanRead 0x71
+#define KIO_I2CList     0x38
+
+extern void kio_GetFWVersion( knet_dev_t * dev , unsigned int *);
+extern int kio_SetIO(knet_dev_t * dev, unsigned int io);
+extern int kio_ClearIO(knet_dev_t * dev, unsigned int io);
+extern int kio_ReadIO(knet_dev_t * dev, unsigned int io);
+extern int kio_ChangeIO(knet_dev_t * dev, unsigned int io);
+extern int kio_ReadAnalog(knet_dev_t * dev, unsigned int an, uint16_t *value, uint32_t *time);
+extern int kio_ChangeLed(knet_dev_t * dev, unsigned state);
+extern int kio_ConfigIO(knet_dev_t * dev, unsigned io, unsigned config);
+extern int kio_ChangePWM_ratio(knet_dev_t * dev, unsigned int io, unsigned int ratio);
+extern void kio_i2c_StartScan(knet_dev_t * dev);
+extern int kio_SetANValue(knet_dev_t * dev, unsigned int an, unsigned int value);
+extern int kio_i2c_ListScan(knet_dev_t * dev, char * list);
+
+#endif /* __koreio__ */

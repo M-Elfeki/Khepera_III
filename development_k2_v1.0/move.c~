@@ -1,0 +1,64 @@
+/* kh3test.c */
+#include <korebot/korebot.h>
+#include <stdio.h>
+static knet_dev_t * mot1;
+static knet_dev_t * mot2;
+static knet_dev_t * dsPic;
+int main()
+{
+kh3_init();
+/* open various socket and store the handle in their respective pointers */
+dsPic = knet_open( "Khepera3:dsPic", KNET_BUS_I2C , 0 , NULL );
+mot1 = knet_open( "Khepera3:mot1" ,KNET_BUS_I2C , 0 , NULL );
+mot2 = knet_open( "Khepera3:mot2" ,KNET_BUS_I2C , 0 , NULL );
+/* initialize the motor controler 1 */
+kmot_SetMode( mot1 , kMotModeIdle );
+kmot_SetSampleTime( mot1 , 1550 );
+kmot_SetMargin( mot1 , 6 );
+kmot_SetOptions( mot1 , 0x0 , kMotSWOptWindup | kMotSWOptStopMotorBlk |
+kMotSWOptDirectionInv );
+/*
+/*
+/*
+/*
+/*
+kmot_ResetError( mot1 );
+kmot_SetBlockedTime( mot1 , 10);
+kmot_ConfigurePID( mot1 , kMotRegSpeed , 400 , 0 , 10 );
+kmot_ConfigurePID( mot1 ,kMotRegPos,620,3,10);
+kmot_SetSpeedProfile(mot1 ,30,3);
+initialize the motor controler 2 */
+kmot_SetMode( mot2 , kMotModeIdle );
+kmot_SetSampleTime( mot2 , 1550 );
+kmot_SetMargin( mot2 , 6 );
+kmot_SetOptions( mot2 , 0x0 , kMotSWOptWindup | kMotSWOptStopMotorBlk );
+kmot_ResetError( mot2 );
+kmot_SetBlockedTime( mot2 , 10);
+kmot_ConfigurePID( mot2 , kMotRegSpeed , 400 , 0 , 10 );
+kmot_ConfigurePID( mot2 ,kMotRegPos,620,3,10);
+kmot_SetSpeedProfile(mot2 ,30,3);
+
+while(1)
+{
+printf("TEST # 1\n");
+sleep(2);
+Tell to the motor controller to move the Khepera III forward */
+kmot_SetPoint( mot1 , kMotRegSpeed , 10000 );
+kmot_SetPoint( mot2 , kMotRegSpeed , 10000 );
+Wait 2 seconds */
+sleep(2);
+Tell Khepera to turn around himself*/
+kmot_SetPoint( mot1 , kMotRegSpeed , -10000 );
+kmot_SetPoint( mot2 , kMotRegSpeed , 10000 );
+sleep(2);
+kmot_SetPoint( mot1 , kMotRegSpeed , 10000 );
+kmot_SetPoint( mot2 , kMotRegSpeed , 10000 );
+sleep(2);
+kmot_SetPoint( mot1 , kMotRegSpeed , 0 );
+kmot_SetPoint( mot2 , kMotRegSpeed , 0 );
+/* Tell Khepera to turn around himself*/
+kmot_SetPoint( mot1 , kMotRegSpeed , -10000 );
+kmot_SetPoint( mot2 , kMotRegSpeed , 10000 );
+}
+}
+

@@ -1,0 +1,76 @@
+#include <korebot/korebot.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#define MM_S_TO_SPEED_FIRMWARE_S_3 144.01
+static knet_dev_t * mot1;
+static knet_dev_t * mot2;
+
+int main()
+{
+	float mmstospeed=MM_S_TO_SPEED_FIRMWARE_S_3 ;
+	long motspeed = (long)(40.0*mmstospeed);
+	char *fileName ="test.txt", ch, path[1035];
+	int iterator =0, j=0, y=0;
+	FILE *f = fopen(fileName, "w");
+    fprintf(f, "\n=================================================\n\n\n");
+
+	kh3_init();
+	mot1 = knet_open( "Khepera3:mot1", KNET_BUS_I2C , 0 , NULL );
+	mot2 = knet_open( "Khepera3:mot2", KNET_BUS_I2C , 0 , NULL );
+
+	kmot_SetMode( mot1 , kMotModeIdle );
+	kmot_SetSampleTime( mot1 , 1550 );
+	kmot_SetMargin( mot1 , 6 );
+	kmot_SetOptions( mot1 , 0x0 , kMotSWOptWindup | kMotSWOptStopMotorBlk
+	| kMotSWOptDirectionInv );
+	kmot_ResetError( mot1 );
+	kmot_SetBlockedTime( mot1 , 10);
+	kmot_ConfigurePID( mot1 , kMotRegSpeed , 620 , 3 , 10 );
+	kmot_ConfigurePID( mot1 ,kMotRegPos,600,20,30);
+	kmot_SetSpeedProfile(mot1 ,15000,30);
+
+	kmot_SetMode( mot2 , kMotModeIdle );
+	kmot_SetSampleTime( mot2 , 1550 );
+	kmot_SetMargin( mot2 , 6 );
+	kmot_SetOptions( mot2 , 0x0 , kMotSWOptWindup | kMotSWOptStopMotorBlk );
+	kmot_ResetError( mot2 );
+	kmot_SetBlockedTime( mot2 , 10);
+	kmot_ConfigurePID( mot2 , kMotRegSpeed , 620 , 3 , 10 );
+	kmot_ConfigurePID( mot2 ,kMotRegPos,600,20,30);
+	kmot_SetSpeedProfile(mot2 ,15000,30);
+
+    kmot_SetPoint( mot1 , kMotRegSpeed , motspeed );
+    kmot_SetPoint( mot2 , kMotRegSpeed , motspeed );
+
+	while(iterator<24)
+	{
+        FILE *fp = popen("iwlist eth0 scan", "r");
+        while (fgets(path, sizeof(path)-1, fp) != NULL)
+            fprintf(f, "%s", path);
+        fprintf(f, "\n=================================================\n\n\n");
+        pclose(fp);
+        if(iterator == 4 || iterator == 5 || iterator == 16 || iterator == 17)
+        {
+            kmot_SetPoint( mot1 , kMotRegSpeed , motspeed );
+            kmot_SetPoint( mot2 , kMotRegSpeed , -motspeed );
+            sleep(3);
+            kmot_SetPoint( mot1 , kMotRegSpeed , motspeed );
+            kmot_SetPoint( mot2 , kMotRegSpeed , motspeed );
+        }
+        else if(iterator == 10 || iterator == 11)
+        {
+            kmot_SetPoint( mot1 , kMotRegSpeed , -motspeed );
+            kmot_SetPoint( mot2 , kMotRegSpeed , motspeed );
+            sleep(3);
+            kmot_SetPoint( mot1 , kMotRegSpeed , motspeed );
+            kmot_SetPoint( mot2 , kMotRegSpeed , motspeed );
+        }
+        sleep(10);
+        iterator++;
+	}
+	kmot_SetPoint( mot1 , kMotRegSpeed , 0 );
+	kmot_SetPoint( mot2 , kMotRegSpeed , 0 );
+	fclose(f);
+}
+

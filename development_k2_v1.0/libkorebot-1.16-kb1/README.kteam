@@ -1,0 +1,128 @@
+------------------------------------------------------------------------------
+$Id: README.kteam,v 1.5 2005/01/30 16:57:25 pbureau Exp $
+------------------------------------------------------------------------------
+$Date: 2005/01/30 16:57:25 $ $Revision: 1.5 $ $Author: pbureau $
+------------------------------------------------------------------------------
+
+*** KoreBot Library Compilation and Installation quick guide ***
+
+------------------------------------------------------------------------------
+A] Library compilation
+------------------------------------------------------------------------------
+
+To compile the KoreBot library, follow these steps:
+
+-------------------------------- 
+1 - Install the required compiler
+--------------------------------
+
+To compile the korebot library for the korebot platform, a cross compiler
+arm-linux-gcc is required. The library can be compiled to run on other
+platforms using another compiler, in that case the main Makefile should be
+edited.  The arm-linux-gcc cross compiler is available from K-Team website. It
+can be installed as a pre-compiled binary or compiled from scratch using the
+source distribution. Both installation methods are described in the KoreBot
+user manual at chapter "ARM Linux Toolchain".
+
+-------------------------------- 
+2 - Edit the Makefile
+--------------------------------
+
+The default settings in the Makefile should be correct to compile the
+libkorebot using arm-linux-gcc. Some settings can be changed according to your
+system:
+
+-TARGET_SYSTEM: cross compile for the given target 
+-KB_CONFIG_DIRECTORY: location for the libkorebot config files 
+-KOREBOT_TOOLS: location for the korebot-tools package	
+
+
+-------------------------------- 
+3 - Build the library
+--------------------------------
+
+Once properly configured, the library can be completely compiled as well as all
+the example programs by using:
+
+make
+
+To start over from a clean distribution use:
+
+make clean
+
+The compilation results are available in:
+
+ ./libkorebot/build-($TARGET_SYSTEM) 
+
+That directotry will contain:
+
+- All libkorebot related headers in include/korebot, they should be copied to
+the korebot filesystem to compile program with a native compiler (see section B).
+
+- The library itself in lib/
+
+
+-------------------------------- 
+4 - Build the documentation
+--------------------------------
+
+Before building the documentation, the doxygen package should be properly
+installed. The doxygen package can be downloaded from the doxygen website
+www.doxygen.org. The dot command is also required to build the documentation,
+the dot command is part of the graphviz package, which is available for most
+common distribution. The Doxygen documentation can be created from the sources
+using:
+
+make doc
+
+The resulting documentation will be available in ./libkorebot/doc
+
+
+------------------------------------------------------------------------------
+B] Library installation
+------------------------------------------------------------------------------
+
+The library must be installed on the korebot filesystem before being used by
+other programs, the libkorebot Makefile will both provide static and shared
+library. Using the shared library mechanism is highly recommended to save
+memory space on the KoreBot. To install the library to the korebot system,
+follow the following steps.
+
+-------------------------------- 
+1 - Copy the library
+--------------------------------
+
+The content of ./libkorebot/build-($TARGET_SYSTEM)/lib should be copied to the
+KoreBot /usr/lib directory.
+
+-------------------------------- 
+2 - Copy the configuration files
+--------------------------------
+
+The content of ./libkorebot/config should be copied to the Korebot
+($KB_CONFIG_DIRECTORY). That directory is /etc/libkorebot by default.
+
+-------------------------------- 
+3 - Copy the headers
+--------------------------------
+
+To compile korebot programs on the korebot platform, using a native compiler,
+the libkorebot header files should be copied to the korebot system. This step
+is not necessary if you will only cross-compile your programs.  The korebot
+directory ./libkorebot/build-($TARGET_SYSTEM)/include should be copied to the
+korebot /usr/include directory.
+
+------------------------------------------------------------------------------
+C] Program compilation
+------------------------------------------------------------------------------
+
+The easiest way to compile libkorebot programs is to use the program template
+that is provided with the libkorebot distribution.  In the
+./libkorebot/template directory, edit the prog-template.c source and use:
+
+make template 
+
+This will build the template program using libkorebot shared library. To build
+the template program using static linking to the libkorebot, use:
+
+make template-static

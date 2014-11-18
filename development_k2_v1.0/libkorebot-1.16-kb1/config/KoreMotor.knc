@@ -1,0 +1,98 @@
+#---------------------------------------------------------------------
+# KoreMotor.knc - KoreMotor KNet Configuration File
+#---------------------------------------------------------------------
+# $Id: KoreMotor.knc,v 1.2 2004/09/22 08:28:46 pbureau Exp $
+#---------------------------------------------------------------------
+# $Author: pbureau $
+# $Revision: 1.2 $
+# $Date: 2004/09/22 08:28:46 $
+#---------------------------------------------------------------------
+
+section KoreMotor
+modulebus i2c
+modbusaddr 6
+
+device PriMotor1 module 0x0B
+device PriMotor2 module 0x0C
+device PriMotor3 module 0x0D
+device PriMotor4 module 0x0E
+
+device AltMotor1 module 0x0F
+device AltMotor2 module 0x10
+device AltMotor3 module 0x11
+device AltMotor4 module 0x12
+
+device PriMotor1 i2c 0x0B
+device PriMotor2 i2c 0x0C
+device PriMotor3 i2c 0x0D
+device PriMotor4 i2c 0x0E
+
+device AltMotor1 i2c 0x0F
+device AltMotor2 i2c 0x10
+device AltMotor3 i2c 0x11
+device AltMotor4 i2c 0x12
+
+register Mode             0x28 
+register SetPointSource   0x29  
+register HWOptions        0x2a
+register SWOptions        0x2b
+register ControlTyp       0x2c 
+register ErrorFlags       0x2d 
+register StatusFlags      0x2e
+register SetPointHH       0x2f
+register SetPointHL       0x30
+register SetPointLH       0x31
+register SetPointLL       0x32
+register Filter           0x33 
+register PositionHH       0x34
+register PositionHL       0x35
+register PositionLH       0x36
+register PositionLL       0x37
+register SpeedH           0x38
+register SpeedL           0x39
+register TorqueH          0x3a 
+register TorqueL          0x3b
+register TorqueBiasH      0x3c
+register TorqueBiasL      0x3d
+register KpSpeedH         0x3e
+register KpSpeedL         0x3f
+register KdSpeedH         0x40
+register KdSpeedL         0x41
+register KiSpeedH         0x42
+register KiSpeedL         0x43
+register SampleTimeH      0x44
+register SampleTimeL      0x45
+register BlockedTime      0x46 
+register IntGenPeriod     0x47 
+register IntGenAmplitude  0x48 
+register IntGenOffset     0x49 
+register SoftStopMinHH    0x4a 
+register SoftStopMinHL    0x4b 
+register SoftStopMinLH    0x4c
+register SoftStopMinLL    0x4d
+register SoftStopMaxHH    0x4e
+register SoftStopMaxHL    0x4f
+register SoftStopMaxLH    0x50
+register SoftStopMaxLL    0x51
+register Acceleration     0x52
+register StaticFriction   0x54
+register HWCurrentLimit   0x55
+register SWCurrentLimitH  0x56 
+register SWCurrentLimitL  0x57
+register MinSampleTimeL   0x58 
+register MinSampleTimeH   0x59
+register NearTargetMargin 0x60
+register KpPosL           0x61
+register KpPosH           0x62
+register KdPosL           0x63
+register KdPosH           0x64
+register KiPosL           0x65
+register KiPosH           0x66
+register KpTorqueL        0x67
+register KpTorqueH        0x68 
+register KdTorqueL        0x69
+register KdTorqueH        0x6a
+register KiTorqueL        0x6b
+register KiTorqueH        0x6c
+register MaxSpeedL        0x6d
+register MaxSpeedH        0x6e

@@ -1,0 +1,102 @@
+\documentclass{article}
+\let\Item\item
+\newcommand\SpecialItem{\renewcommand\item[1][]{\Item[\textbullet~\bfseries##1]}}
+\renewcommand\enddescription{\endlist\global\let\item\Item}
+\title{Computerizing The Brain}
+\author{Omar Yousry[46], Omar Barakat[44], Mohammed El-Feki[60]}
+\usepackage{hyperref}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+\section*{Challenges Consequences}
+\addcontentsline{toc}{section}{Challenges Consequences}
+\subsection*{Traditional Computing}
+Usually Uni-processor computer architecture depends on the sequential processes. The process is deactivated until the previous process runs. This method gets the required results but usually in many times because of the propagation happened due to the sequential data processing and moving.
+
+%The Computers often uses a set of rules and calculations to get the required results. In other words the Computers are arithmetically functioned, that leads to make the only way for traditional computers to learn is by a set of rules using if conditions and loops and some arithmetic equations to memorize.\cite{Koch}%
+
+\newline Generally programming the computers constrains you with some rules that can not get rid of their consequences. Programming with high level languages like Java, C.. etc, makes the deducing of new rules is unreachable. Unlike the human brain, the computers can not deduce new rules from a certain experiments except if they already know how to deduce that rules, in other word they can not deduce without rules. Even in hierarchically flowed, the computer can not deduce rules from nothing. So the only way to Simulate the real brain is to build a hierarchic tree of rules generators that can flow down from a simple root rule builder. This absolutely needs a huge computer performance to execute that tree in relevant time without any kind of propagations.
+The computers mostly depends on traditional models such as Von-Neumann architecture. The Von-Neumann computers are programmable by higher level languages like C, Java and then translating that down to the machine's assembly language. However it can not ever deduce the next line of code or the next algorithm the computer has to use the implementation of the required function.
+The speed of each traditional computer is dependant upon different aspects of the processor. 
+\newline {\bf Conclusion:}Current Computer Architecture is not sufficient in order to satisfy the huge requirements of such brain.
+\subsection*{Exascale Computing}
+\begin{math}
+This Expression refers to computing systems that uses at lease one exaFLOPS(10^{18} FLOPS)
+\end{math}. The FLOPS (Floating-point Operations Per Second) mostly is used to measure the performance of the computers within the fields of scientific calculation.
+\begin{equation}
+FLOPS = cores * clock * \frac{FLOPs}{cycle}
+\end{equation} 
+\newline {\bf Conclusion:}Exascale computing is a quite relevant choice for the brain simulation processes due to the high accuracy and Very fast processing mechanisms.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{The Data Processing Mechanisms in traditional Computing}
+\addcontentsline{toc}{section}{The Data Processing Mechanisms in traditional Computing}
+The purpose of this operation is to collect and manipulate the input in order to reach a meaningful output.
+Usually the data is about a large amount of numbers in opposite of word processing which collects and manipulates the text and forms a meaningful text.
+Data Processing systems usually involve some combinations of:
+\SpecialItem
+\begin{description}
+\item Conversion : convert the data to the format of the system.
+\item Validation : Validate this information according to the system Axioms.
+\item Sorting : Arrange items in a machine-readable sequence.
+\item Summarization : Provide the main titles of the detailed data.
+\item Aggregation and collecting : Combine multiple pieces of data.
+\item Analysis :  Describe facts, Detect Patterns, Develop explanations,Test hypotheses.
+\item Reporting : Report this data to the user through translating it to the output format.
+\end{description}\cite{Koch}
+Usually any use of computers to perform defined operations on data can be included under the data processing.
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section*{The Human Brain Project(HBP)}
+\addcontentsline{toc}{section}{The Human Project}
+The Human Brain Project is a large scientific research project, directed by the École polytechnique fédérale de Lausanne and largely funded by the Europena Union, which aims to simulate the complete human brain on supercomputers to better understand how it functions.
+\subsection*{Applications}
+\SpecialItem
+\begin{description}
+\item Biology:Dissecting the biological mechanisms responsible for cognition and behaviour medicine, understanding brain diseases, developing new diagnostic tools and treatments, personalised medicine
+\cite{Koch}
+\newline \item Computing:Developing architectures for high performance computing; low-energy computing systems with brain-like intelligence; hybrid systems integrating neuromorphic and conventional technologies applications for industry.
+\end{description}
+\subsection*{Research Hot Spots}
+The study will seek to answer key questions concerning the relationships among different levels of brain organization and Connectivity such as :
+\newline How many different types of synapse are there? What are the rules governing the formation of synaptic connections between neurons of different types, and the long-term stabilisation of these connections? How are synaptic locations chosen? What are the rules governing long-range connections between different brain regions?
+\subsection*{Methodology}
+Building and simulating multi-level models of the complete human brain will require exascale supercomputing infrastructure with unprecedented capabilities for interactive computing and visualization.
+1)Developing Exascale Supercomputing for Brain research.
+\newline 2)Numerical Methods, Programming Models and Tools. To support efficient interactive simulation of brain models, the project should develop new numerical methods, parallel programming models, and performance analysis tools adapted to the extreme parallelism of future exascale systems and should also develop new middleware for workflow and I/O management.
+\newline 3)Interactive Visualization, Analysis and Control. The project should develop a novel software framework allowing interactive steering and in visualization of simulations.
+\newline 4)Exascale Data Management. HBP brain simulations would generate massive amounts of data. 
+\newline 5)The High Performance Computing Platform. The HBP High Performance Computing Platform should make the project’s supercomputing capabilities available to the project and the community.\cite{Markram}
+\subsection*{Challenges while Implementation}
+Models chosen to represent the Brain should meet three key requirements:
+\SpecialItem
+\begin{description}
+\item They should support the strong leadership and tight project management, necessary for the HBP to achieve its scientific and technical goals.
+\item They should guarantee that the ICT Platforms becomes a genuine resource for the scientific community ensuring technical quality and performance as well as 24/7 availability.
+\item They should guarantee the openness and flexibility of the project, ensuring that it draws the maximum possible benefit from new ideas and new technologies, as they emerge, and encouraging the broadest possible participation by researchers with different theoretical and experimental approaches.
+\cite{Markram}
+\end{description}
+	 
+
+\begin{thebibliography}{9}
+
+\bibitem{Koch} Koch, C. and R.C. Reid\H , \emph{Neuroscience: Observatories of the mind. Nature},2012. 483(7390): p.397-398.
+
+\bibitem{Fries} Fries..P,  \emph{Neuronal gamma-band synchronization as a fundamental process in cortical computation},2009. 17: p. 209-224..
+
+\bibitem{Markram}Henry Markram, Karlheinz Meier, \emph{The Human Brain Project – Preparatory Study}, Consortium, Lausanne, April 2012.
+
+\end{thebibliography}
+
+\end{document}

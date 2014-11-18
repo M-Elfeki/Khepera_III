@@ -1,0 +1,10 @@
+<area shape="rect" href="$kb__sound_8c.html#8a965e9c9f743dad9bef53deb14071b5" title="kb_snd_play" alt="" coords="168,6,261,30">
+<area shape="rect" href="$kb__error_8c.html#0f83c793a43fabfda5685be6bc7615f2" title="kb_warning" alt="" coords="172,54,257,78">
+<area shape="rect" href="$kb__wav_8c.html#3e776114dca1158163c7bd36b816f114" title="kb_wav_close" alt="" coords="163,102,267,126">
+<area shape="rect" href="$kb__wav_8c.html#544220a68032dccdd1e8fe4a9321f879" title="kb_wav_init" alt="" coords="171,150,259,174">
+<area shape="rect" href="$kb__wav_8c.html#bdb894c6cb217e3982bb8e1850f49c67" title="kb_wav_open" alt="" coords="165,198,264,222">
+<area shape="rect" href="$kb__wav_8c.html#4b072dca25be5dd0efdafb2b5f6fa455" title="kb_wav_read_data" alt="" coords="151,246,279,270">
+<area shape="rect" href="$kb__sound_8c.html#a1c0f658c6d99f7676b86852c54e9e58" title="kb_snd_flush" alt="" coords="341,6,440,30">
+<area shape="rect" href="$kb__error_8c.html#6b59343a29eb6d19b3fd454186e6e5cd" title="kb_vwarning" alt="" coords="344,54,437,78">
+<area shape="rect" href="$kb__wav_8c.html#01f0305d819050098784389bc6edf6db" title="kb_wav_write_hdr" alt="" coords="329,126,452,150">
+<area shape="rect" href="$kb__wav_8c.html#c0711fb78c4835987312aa1c5eaba8d9" title="kb_wav_read_hdr" alt="" coords="329,198,452,222">

@@ -1,0 +1,14 @@
+<area shape="rect" href="$kb__memory_8c.html#be1cf0dffd093ca034d94486c5366872" title="kb_alloc" alt="" coords="149,6,219,30">
+<area shape="rect" href="$kb__sound_8c.html#9e8a0cfb9cb2ec97e05b0e17b28146a4" title="kb_snd_init" alt="" coords="140,54,228,78">
+<area shape="rect" href="$kb__sound_8c.html#f26d265e285673693209fec28720cad0" title="kb_snd_open" alt="" coords="135,102,233,126">
+<area shape="rect" href="$kb__sound_8c.html#8a965e9c9f743dad9bef53deb14071b5" title="kb_snd_play" alt="" coords="137,150,231,174">
+<area shape="rect" href="$kb__sound_8c.html#1c48dc2681adb8e879f20c9a299a48b7" title="kb_snd_setSampleRate" alt="" coords="104,198,264,222">
+<area shape="rect" href="$kb__wav_8c.html#3e776114dca1158163c7bd36b816f114" title="kb_wav_close" alt="" coords="132,246,236,270">
+<area shape="rect" href="$kb__wav_8c.html#544220a68032dccdd1e8fe4a9321f879" title="kb_wav_init" alt="" coords="140,294,228,318">
+<area shape="rect" href="$kb__wav_8c.html#bdb894c6cb217e3982bb8e1850f49c67" title="kb_wav_open" alt="" coords="135,342,233,366">
+<area shape="rect" href="$kb__wav_8c.html#4b072dca25be5dd0efdafb2b5f6fa455" title="kb_wav_read_data" alt="" coords="120,390,248,414">
+<area shape="rect" href="$kb__sound_8c.html#c177fb123161cfa1ce1e8dcbd445ac2e" title="kb_snd_close" alt="" coords="324,102,425,126">
+<area shape="rect" href="$kb__sound_8c.html#11df3499c757b49f9ecb299c5efd503e" title="kb_snd_doMunmap" alt="" coords="487,102,620,126">
+<area shape="rect" href="$kb__sound_8c.html#a1c0f658c6d99f7676b86852c54e9e58" title="kb_snd_flush" alt="" coords="325,150,424,174">
+<area shape="rect" href="$kb__wav_8c.html#01f0305d819050098784389bc6edf6db" title="kb_wav_write_hdr" alt="" coords="313,270,436,294">
+<area shape="rect" href="$kb__wav_8c.html#c0711fb78c4835987312aa1c5eaba8d9" title="kb_wav_read_hdr" alt="" coords="313,342,436,366">

@@ -1,0 +1,6 @@
+<area shape="rect" href="$kmot_8c.html#3572cbe8194aa03505c14c18af4257cf" title="kmot_ConfigurePID" alt="" coords="185,54,319,78">
+<area shape="rect" href="$kb__socket_8c.html#5c3bae414ded845ac60780a2a6118691" title="ksock_send_answer" alt="" coords="183,102,321,126">
+<area shape="rect" href="$knet_8c.html#598780b62adade010f48342fdd2feefb" title="knet_set_order" alt="" coords="372,6,479,30">
+<area shape="rect" href="$knet_8c.html#c9175d7244c00278b58b83398e6cbec3" title="knet_write16" alt="" coords="379,54,472,78">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="529,54,615,78">
+<area shape="rect" href="$kb__socket_8c.html#2b538227cf83afa6aedb5735f26c25c7" title="DieWithError" alt="" coords="379,102,472,126">

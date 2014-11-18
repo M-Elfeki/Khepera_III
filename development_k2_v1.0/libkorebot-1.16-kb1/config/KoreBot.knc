@@ -1,0 +1,17 @@
+#---------------------------------------------------------------------
+# KoreBot.knc - KoreBot KNet Configuration File
+#---------------------------------------------------------------------
+# $Id: KoreBot.knc,v 1.1 2004/07/29 10:51:50 cgaudin Exp $
+#---------------------------------------------------------------------
+# $Author: cgaudin $
+# $Revision: 1.1 $
+# $Date: 2004/07/29 10:51:50 $
+#---------------------------------------------------------------------
+
+section KoreBot
+
+#
+# the VCore voltage of the XScale PXA255 can 
+# be changed by this DAC device
+#
+device XScaleVCoreDAC i2c 0x20

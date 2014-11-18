@@ -1,0 +1,20 @@
+/*-------------------------------------------------------------------------------
+ * Project: KoreBot Library	
+ * $Author: pbureau $
+ * $Date: 2005/01/20 08:41:54 $
+ * $Revision: 1.1 $
+ * 
+ * 
+ * $Header: /home/cvs/libkorebot/src/kb_gpio.h,v 1.1 2005/01/20 08:41:54 pbureau Exp $
+ */
+  
+
+
+extern int kb_gpio_init();
+extern int kb_gpio_get();
+extern int kb_gpio_cleanup();
+extern void kb_gpio_dir(unsigned gpio, unsigned dir);
+extern void kb_gpio_set(unsigned gpio);
+extern void kb_gpio_clear(unsigned gpio);
+extern int kb_gpio_get(unsigned gpio);
+void kb_gpio_function(unsigned gpio, unsigned function);

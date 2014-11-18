@@ -1,0 +1,7 @@
+<area shape="rect" href="$kb__khepera3_8c.html#21dd99c80122fe78ac996fb9fb175f6d" title="kh3_proximity_ir" alt="" coords="116,54,231,78">
+<area shape="rect" href="$kb__gpio_8c.html#b27da43aa5cbdd9cc0e9ffdf89e343ae" title="kb_gpio_get" alt="" coords="303,6,393,30">
+<area shape="rect" href="$kb__khepera3_8c.html#560ca2a7e8614f28e009c99de7ce39dd" title="kh3_getcommand" alt="" coords="287,54,409,78">
+<area shape="rect" href="$kb__khepera3_8c.html#328a5ebb9f30203979f102395c9da4c9" title="kh3_sendcommand" alt="" coords="281,102,415,126">
+<area shape="rect" href="$kb__gpio_8c.html#caca2e8b3d9c7a3470b61c370b8240cd" title="bit_test" alt="" coords="476,6,540,30">
+<area shape="rect" href="$knet_8c.html#55448c3291f508086732d70fbb643c30" title="knet_llread" alt="" coords="467,54,549,78">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="465,102,551,126">

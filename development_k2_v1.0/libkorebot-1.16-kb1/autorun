@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# start/stot auto run daemons.
+
+case "$1" in
+    start)
+        echo -n "Autorun start"
+        cd /root/
+        ./main & > /dev/null
+        ;;
+    stop)
+        echo -n "Autorun stop"
+
+        ;;
+    reload)
+        ;;
+    force-reload)
+        $0 restart
+        ;;
+    restart)
+        echo -n "Autorun restart"
+        ;;
+    *)
+        echo "Usage: /etc/init.d/autorun {start|stop|reload|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0
+

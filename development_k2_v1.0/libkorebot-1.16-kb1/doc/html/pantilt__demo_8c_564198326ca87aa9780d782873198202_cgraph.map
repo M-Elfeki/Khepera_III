@@ -1,0 +1,12 @@
+<area shape="rect" href="$kmot_8c.html#088875a24e27c208ae36e1d8ebeb3b02" title="kmot_ResetError" alt="" coords="169,5,289,29">
+<area shape="rect" href="$kmot_8c.html#f4c10f7b0edd895cbb4f4801fd903ba1" title="kmot_SearchLimits" alt="" coords="163,101,296,125">
+<area shape="rect" href="$kmot_8c.html#c0aa7b1cc7f7d27ab59ccabaf99f6cdc" title="kmot_SetBlockedTime" alt="" coords="153,53,305,77">
+<area shape="rect" href="$knet_8c.html#dc6fa8c32875470f89a4a4c6aa60b503" title="knet_write8" alt="" coords="365,5,453,29">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="516,29,601,53">
+<area shape="rect" href="$kb__time_8c.html#1d96883ed49195c36ef5740dcce2f590" title="kb_getTime" alt="" coords="365,101,453,125">
+<area shape="rect" href="$knet_8c.html#1060218c799b6632a29673d8db6fc3bd" title="knet_read" alt="" coords="371,149,448,173">
+<area shape="rect" href="$knet_8c.html#44208ab588a0e926659f4877fc87a714" title="knet_read32" alt="" coords="513,197,604,221">
+<area shape="rect" href="$knet_8c.html#598780b62adade010f48342fdd2feefb" title="knet_set_order" alt="" coords="356,248,463,272">
+<area shape="rect" href="$knet_8c.html#3a92cbf71c673423ef324c9190f932cd" title="knet_write32" alt="" coords="363,53,456,77">
+<area shape="rect" href="$knet_8c.html#d5d0333b6dd8438307e51850a7af26be" title="knet_read8" alt="" coords="516,149,601,173">
+<area shape="rect" href="$knet_8c.html#92df29c6cbda9a8b70febbf726148dc6" title="knet_lltransfer" alt="" coords="653,173,757,197">

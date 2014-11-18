@@ -1,0 +1,5 @@
+<area shape="rect" href="$i2ccom_8c.html#1fef7a079c461a96208a89e2ee716037" title="i2c_exists" alt="" coords="195,6,275,30">
+<area shape="rect" href="$kb__error_8c.html#9cb11fb40aba13d25f44b89cc71f5e67" title="kb_error" alt="" coords="201,54,268,78">
+<area shape="rect" href="$knet_8c.html#79d4d7b1aa42b36255a2fe2c60bf790b" title="knet_bus_find_device" alt="" coords="161,102,308,126">
+<area shape="rect" href="$knet_8c.html#d8438369c28f223a1bca0b2b7b48051f" title="knet_device_create" alt="" coords="168,150,301,174">
+<area shape="rect" href="$kb__error_8c.html#3384c94e5877279d11bed633638184d5" title="kb_verror" alt="" coords="359,54,433,78">

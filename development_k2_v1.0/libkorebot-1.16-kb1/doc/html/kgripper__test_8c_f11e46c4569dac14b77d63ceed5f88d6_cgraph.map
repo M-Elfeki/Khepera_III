@@ -1,0 +1,4 @@
+<area shape="rect" href="$kb__gripper_8c.html#76d0160cab1adf655af22b618778ab8e" title="kgripper_Gripper_Set_Torque" alt="" coords="133,30,323,54">
+<area shape="rect" href="$knet_8c.html#598780b62adade010f48342fdd2feefb" title="knet_set_order" alt="" coords="372,6,479,30">
+<area shape="rect" href="$knet_8c.html#c9175d7244c00278b58b83398e6cbec3" title="knet_write16" alt="" coords="379,54,472,78">
+<area shape="rect" href="$knet_8c.html#8c383097f8fef553088f53e073b4c9e1" title="knet_llwrite" alt="" coords="529,54,615,78">
